@@ -13,7 +13,7 @@ namespace Day3
             UserList List = new UserList();
 
             // 1.1 cikliski vaica pievienot lietotajus
-            while(true)
+            while (true)
             {
                 //1.1. Ievada vaardu
                 //1.2. Ievada datumu (DateTime.TryParse) cikliski 
@@ -25,7 +25,23 @@ namespace Day3
             }
             Console.Read();
 
+        }
+        public static DateTime GetDate()
+        {
+            Console.Write("Enter date: ");
+            string input = Console.ReadLine();
 
+            if(DateTime.TryParse(input, out DateTime date))
+            {
+                return date;
+            }
+            else
+            {
+                Console.WriteLine("Invalid date!" );
+                    return GetDate();
+
+            }
+        }
         }
     }
 }
