@@ -23,13 +23,12 @@ namespace Day3
             BirthDate = birthDate;
             Gender = gender;
         }
-    }
-    public interface Age()
+
+        public int Age()
         {
-         // calculate age using BirthDate
-         return 0;
+            // calculate age using BirthDate
+            return 0;
         }
+    }
 }
 
-
-}
