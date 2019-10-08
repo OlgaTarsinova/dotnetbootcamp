@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DAY4_ABSTRACTION
 {
-    class IPlayer
+    interface IPlayer
     {
+        int GuessNumber();
+        bool IsNumberGuessed(int number);
+        string GetName();
+
     }
 }

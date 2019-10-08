@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{85F466E0-665D-4CD4-A5F8-FB2AA6ACFCE1}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>DAY4_ABSTRACTION</RootNamespace>
-    <AssemblyName>DAY4_ABSTRACTION</AssemblyName>
+    <ProjectGuid>{8DAB85AD-7D6B-488F-8362-AA6C2E9E0A03}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleHelpers</RootNamespace>
+    <AssemblyName>ConsoleHelpers</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,22 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasePlayer.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="IPlayer.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="BaseConsoleReader.cs" />
+    <Compile Include="ConsoleInput.cs" />
+    <Compile Include="DateReader.cs" />
+    <Compile Include="IntengerReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Robot.cs" />
-    <Compile Include="User.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ConsoleHelpers\ConsoleHelpers.csproj">
-      <Project>{8dab85ad-7d6b-488f-8362-aa6c2e9e0a03}</Project>
-      <Name>ConsoleHelpers</Name>
-    </ProjectReference>
+    <Compile Include="TextReader.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

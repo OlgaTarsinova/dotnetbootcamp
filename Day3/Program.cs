@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleHelpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,58 +11,50 @@ namespace Day3
     {
         static void Main(string[] args)
         {
-            UserList List = new UserList();
-
-            // 1.1 cikliski vaica pievienot lietotajus
-            while (true)
+            try
             {
-                //1.1. Ievada vaardu
-                string name = GetText();
-                //1.2. Ievada datumu (DateTime.TryParse) cikliski 
-                DateTime birthDate = GetDate();
-                //1.3 Ievada dzimumu (Enum.TryParse) cikliski 
-                UserProfile.Genders gender = GetGender();
 
-                //2. Izsauc lietotaja pirvienoshanu ar vertibam augstak
-                List.Add();
-                //3. Ja neizdevas prievienot , attelo kludas pazinjojumu un sak 1. soli no jauna
+                UserList List = new UserList();
 
+                // 1.1 cikliski vaica pievienot lietotajus
+                while (true)
+                {
+                    try
+                    {
+                        //1.1. Ievada vaardu
+                        string name = ConsoleInput.GetText("Enter name: ");
+                        //1.2. Ievada datumu (DateTime.TryParse) cikliski 
+                        DateTime birthDate = ConsoleInput.GetDate("Enter birth date: ");
+                        //1.3 Ievada dzimumu (Enum.TryParse) cikliski .
+                        UserProfile.Genders gender = GetGender();
+
+                        //2. Izsauc lietotaja pirvienoshanu ar vertibam augstak
+                        List.Add(name, gender, birthDate);
+                        //3. Ja neizdevas prievienot , attelo kludas pazinjojumu un sak 1. soli no jaunaRT
+
+                        Console.WriteLine("Add another? (y/n)");
+                        string input = Console.ReadLine().ToLower();
+                        if(input == "n")
+                        {
+                            break;
+                        }
+                    }
+                    catch (InputException ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
             }
+            catch(Exception ex)
+
+                    {
+                            Console.WriteLine("Unexpected error! {0}", ex.Message);
+                    }
+                
             Console.Read();
 
         }
-        public static DateTime GetDate()
-        {
-            Console.Write("Enter date: ");
-            string input = Console.ReadLine();
-
-            if (DateTime.TryParse(input, out DateTime date))
-            {
-                return date;
-            }
-            else
-            {
-                Console.WriteLine("Invalid date!");
-                return GetDate();
-
-            }
-        }
-        public static string GetText()
-        {
-            Console.Write("Enter name: ");
-            string name = Console.ReadLine();
-            name = name.Trim(); 
-
-            if(!String.IsNullOrEmpty(name))
-            {
-                return name;
-            }
-            else
-            {
-                Console.WriteLine("Empty text!");
-                return GetText();
-            }
-        }
+        
         public static UserProfile.Genders GetGender()
             
         {
