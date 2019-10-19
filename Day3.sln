@@ -9,6 +9,25 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAY4_ABSTRACTION", "DAY4_AB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHelpers", "ConsoleHelpers\ConsoleHelpers.csproj", "{8DAB85AD-7D6B-488F-8362-AA6C2E9E0A03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET_BLACKJACK", "NET_BLACKJACK\NET_BLACKJACK.csproj", "{2C45B0C3-4C08-4C55-A6A1-10378AFE289B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebSamples", "WebSamples", "{5DFF1B35-52C5-43FD-94BE-FD50F4FC90F3}"
+	ProjectSection(SolutionItems) = preProject
+		HTMLPage.html = HTMLPage.html
+		Javascriptsample.html = Javascriptsample.html
+		SamsungGalaxy.html = SamsungGalaxy.html
+		ScriptJS.js = ScriptJS.js
+		Stylecss.css = Stylecss.css
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicSample", "LogicSample\LogicSample.csproj", "{603AA185-9305-4EF5-AC3E-AE730008637B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicSample.test", "LogicSample.test\LogicSample.test.csproj", "{6E7104A4-EBA9-473E-85FB-A44FDD97E556}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{69A27170-72B2-45D7-ABCA-65E0A780172E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShop", "WebShop\WebShop.csproj", "{0BD753A1-4C70-4C1D-85BF-675340C01984}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +46,26 @@ Global
 		{8DAB85AD-7D6B-488F-8362-AA6C2E9E0A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DAB85AD-7D6B-488F-8362-AA6C2E9E0A03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DAB85AD-7D6B-488F-8362-AA6C2E9E0A03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C45B0C3-4C08-4C55-A6A1-10378AFE289B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C45B0C3-4C08-4C55-A6A1-10378AFE289B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C45B0C3-4C08-4C55-A6A1-10378AFE289B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C45B0C3-4C08-4C55-A6A1-10378AFE289B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{603AA185-9305-4EF5-AC3E-AE730008637B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{603AA185-9305-4EF5-AC3E-AE730008637B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{603AA185-9305-4EF5-AC3E-AE730008637B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{603AA185-9305-4EF5-AC3E-AE730008637B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E7104A4-EBA9-473E-85FB-A44FDD97E556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E7104A4-EBA9-473E-85FB-A44FDD97E556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E7104A4-EBA9-473E-85FB-A44FDD97E556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E7104A4-EBA9-473E-85FB-A44FDD97E556}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69A27170-72B2-45D7-ABCA-65E0A780172E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A27170-72B2-45D7-ABCA-65E0A780172E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A27170-72B2-45D7-ABCA-65E0A780172E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A27170-72B2-45D7-ABCA-65E0A780172E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BD753A1-4C70-4C1D-85BF-675340C01984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD753A1-4C70-4C1D-85BF-675340C01984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD753A1-4C70-4C1D-85BF-675340C01984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD753A1-4C70-4C1D-85BF-675340C01984}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
