@@ -17,35 +17,36 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">WebShop</a>
+                <a class="navbar-brand" asp-action="Index" asp-controller="Home">Web shop</a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a asp-action="Index" asp-controller="Item">Catalog</a></li>
                 </ul>
-            </div>
-        </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a asp-controller="Account"asp-action="SignUp">Sign up</a></li>
+                
+                    <li><a asp-controller="Account"asp-action="SignIn">Sign in</a></li>
+                    <li><a href="#">My cart</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
     </nav>
 
-    <partial name="_CookieConsentPartial" />
-
-    <div class="container body-content">
+    <div class="container">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2019 - WebShop</p>
-        </footer>
     </div>
 
     <environment include="Development">

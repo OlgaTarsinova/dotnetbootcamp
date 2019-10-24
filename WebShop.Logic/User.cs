@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace WebShop.Logic
 {
-    class User
+    /// <summary>
+    /// Lietotāja dati
+    /// </summary>
+    public class User
     {
+        /// <summary>
+        /// Identifikators
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
+        /// E-pasts
+        /// </summary>
+        public string Email { get; set; }
+
+        /// <summary>
+        /// Parole
+        /// </summary>
+        public string Password { get; set; }
     }
 }
